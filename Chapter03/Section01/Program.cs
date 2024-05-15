@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Section01 {
     internal class Program {
@@ -18,9 +20,18 @@ namespace Section01 {
                 "Hong Kong",
             };
 
-            IEnumerable<string> query = names.Select(s=>s.ToLower());
-            foreach (string s in query);
-                Console.WriteLine(s);
+            var query = names.Where(s => s.Length <= 5).ToArray();
+            foreach (var name in query) {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("------------");
+            
+            names[0] = "Osaka";
+            foreach (var item in query) {
+                Console.WriteLine(item);
+            }
+
         }
 
     }
