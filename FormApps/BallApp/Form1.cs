@@ -31,7 +31,7 @@ namespace BallApp {
         private void timer1_Tick(object sender, EventArgs e) {
 
             for (int i = 0; i < balls.Count; i++) {
-                balls[i].Move();
+                balls[i].Move(pbBar, pbs[i]);
                 pbs[i].Location = new Point((int)balls[i].PosX, (int)balls[i].PosY);
             }
         }
@@ -62,7 +62,8 @@ namespace BallApp {
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e) {
-
+            bar.Move(e.KeyCode);
+            pbBar.Location = new Point((int)bar.PosX, (int)bar.PosY);
         }
     }
 }

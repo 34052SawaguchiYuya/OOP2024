@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BallApp {
-    internal class Bar : Obj{
+    internal class Bar : Obj {
 
         public Bar(double xp, double yp)
             : base(xp, yp, @"Picture\tennis?ball.png") {
@@ -19,11 +19,14 @@ namespace BallApp {
             return true;
         }
         public override bool Move(Keys direction) {
-            if (direction == Keys.Left) {
-                PosX += MoveX;
-            } else if (direction == Keys.Right) {
-                PosX -= MoveX;
-            }
+            if (direction == Keys.Right)
+                if (PosX < 635) {
+                    PosX += MoveX;
+                } else if (direction == Keys.Left) {
+                    if (PosX > 0) {
+                        PosX -= MoveX;
+                    }
+                }
             return true;
         }
     }
