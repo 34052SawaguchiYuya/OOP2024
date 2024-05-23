@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -38,18 +39,27 @@ namespace Exercise02 {
                 if (string.IsNullOrEmpty(line))
                     break;//空行だったら抜ける
 
-
+                int index = names.FindIndex(s => s == line);
+                Console.WriteLine(index);
             } while (true);
-
         }
 
         private static void Exercise2_2(List<string> names) {
-            Console.WriteLine();
+            var count = names.Count(s => s.Contains('o'));
+            Console.WriteLine(count);
+        }
 
-        }
         private static void Exercise2_3(List<string> names) {
+            var selected = names.Where(s => s.Contains('o')).ToArray();
+            foreach (var name in selected) 
+                Console.WriteLine(name);
         }
+
         private static void Exercise2_4(List<string> names) {
+            var selected = names.Where(s => s.StartsWith("B")). Select(s => new { s.Length, s });
+            foreach (var obj in selected) {
+                Console.WriteLine(obj.s + "," + obj.Length);
+            }
         }
     }
 }
