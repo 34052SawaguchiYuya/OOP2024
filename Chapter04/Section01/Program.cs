@@ -28,7 +28,8 @@ namespace Section01 {
 
             Console.Write("整数を入力：");
             string inputNum = Console.ReadLine();
-            int num;
+
+            int num = (imputNum);
 
             if (int.TryParse(inputNum, out num)) {
                 Console.WriteLine("整数に変換した値：" + num);
