@@ -43,32 +43,35 @@ namespace Exercise02 {
 
             Exercise2_7(books);
         }
-        private static void Exercise2_1(int[] numbers) {
-            var book = book
+        private static void Exercise2_1(List<Book>books) {
+            var book2 = books.Where(b => b.Title == "ワンダフル・C#ライブ");
+            foreach(var book in book2) {
+                Console.WriteLine("[0]:[1]円 [2]ページ", book.Title, book.Price, book.Pages);
+            }
         }
 
-        private static void Exercise2_2(int[] numbers) {
-            for (int i = 0; i < 3,) ;
+        private static void Exercise2_2(List<Book> books) {
+            int count = books.Count(b => b.Title.Contains("C#"));
+            Console.WriteLine(count);
         }
-        private static void Exercise2_3(int[] numbers) {
+        private static void Exercise2_3(List<Book> books) {
+            var average = books.Where(b => b.Title.Contains("C#")).Average(b => b.Pages);
+            Console.WriteLine();
+        }
+        private static void Exercise2_4(List<Book> books) {
+            var book = books.FirstOrDefault(b => b.Price >= 4000);
+            if(book != null)
+                Console.WriteLine(book.Title);
+        }
+        private static void Exercise2_5(List<Book> books) {
+            var pages = books.Where(b => b.Price < 4000).Max(b => b.Pages);
+            Console.WriteLine(pages);
+        }
+        private static void Exercise2_6(List<Book> books) {
 
         }
-        private static void Exercise2_4(int[] numbers) {
+        private static void Exercise2_7(List<Book> books) {
 
         }
-        private static void Exercise2_5(int[] numbers) {
-
-        }
-        private static void Exercise2_6(int[] numbers) {
-
-        }
-        private static void Exercise2_7(int[] numbers) {
-
-        }
-    }
-    class Book {
-        public string Title { get; set; }
-        public int Price { get; set; }
-        public int Pages { get; set; }
     }
 }
