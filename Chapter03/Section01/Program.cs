@@ -8,6 +8,8 @@ using System.Xml.Linq;
 
 namespace Section01 {
     internal class Program {
+        private static bool item;
+
         static void Main(string[] args) {
             var names = new List<string> {
                 "Tokyo",

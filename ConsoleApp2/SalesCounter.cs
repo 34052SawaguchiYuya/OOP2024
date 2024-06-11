@@ -9,6 +9,8 @@ namespace SalesCounter {
     public class SalesCounter {
         private List<Sale> _sales;
 
+        public static string ShopName { get; private set; }
+
         //コンストラクタ
         public SalesCounter(string filePass) {
             _sales = ReadSales(filePass);
@@ -23,19 +25,18 @@ namespace SalesCounter {
                 Sale sale = new Sale();
                 ShopName = items[0];
             }
+        }
 
-            //店舗別の売り上げを求める
-            public IDictionary<string, int> GetPerStoreSales() {
-                var dict = new Dictionary<string, int>();
-                foreach (var sale in _sales) {
-                    if (dict.ContainsKey(sale.ShopName)) {
-                        dict[sale.ShopName] += sale.Amount;
-                    } else {
-                        dict[sale.ShopName] = sale.Amount;
-                    }
+        private static IDictionary<string, int> GetPerStoreSales() {
+            var dict = new Dictionary<string, int>();
+            foreach (var sale in _sales) {
+                if (dict.ContainsKey(sale.ShopName)) {
+                    dict[sale.ShopName] += sale.Amount;
+                } else {
+                    dict[sale.ShopName] = sale.Amount;
                 }
-                return dict;
             }
+            return dict;
         }
     }
 }
