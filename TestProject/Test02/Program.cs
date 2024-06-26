@@ -13,7 +13,7 @@ namespace Test02 {
 
     class Program {
         static void Main(string[] args) {
-            var numbers = new List<int> {
+            List<int> list = new List<int>() {
                     12, 87, 94, 14, 53, 20, 40, 35, 76, 91, 31, 17, 48
                 };
 
@@ -92,7 +92,7 @@ namespace Test02 {
         //問題５　平均年齢を表示
         //　　　　出力結果【30.2才】
         private static void Exercise05(List<Person> persons) {
-            
+            double result = list.Average();
 
 
         }
