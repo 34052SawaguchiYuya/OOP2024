@@ -64,7 +64,6 @@
             label1.Size = new Size(50, 25);
             label1.TabIndex = 0;
             label1.Text = "日付";
-            label1.Click += label1_Click;
             // 
             // dtpDate
             // 
@@ -73,7 +72,6 @@
             dtpDate.Name = "dtpDate";
             dtpDate.Size = new Size(200, 33);
             dtpDate.TabIndex = 1;
-            dtpDate.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // label2
             // 
@@ -92,7 +90,6 @@
             cbAuther.Name = "cbAuther";
             cbAuther.Size = new Size(236, 23);
             cbAuther.TabIndex = 3;
-            cbAuther.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label3
             // 
@@ -103,7 +100,6 @@
             label3.Size = new Size(63, 25);
             label3.TabIndex = 4;
             label3.Text = "メーカー";
-            label3.Click += label3_Click;
             // 
             // label4
             // 
@@ -132,7 +128,6 @@
             cbCarName.Name = "cbCarName";
             cbCarName.Size = new Size(224, 23);
             cbCarName.TabIndex = 7;
-            cbCarName.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // groupBox1
             // 
@@ -147,7 +142,6 @@
             groupBox1.Size = new Size(349, 51);
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
-            groupBox1.Enter += groupBox1_Enter;
             // 
             // rbOther
             // 
@@ -232,7 +226,6 @@
             label6.Size = new Size(50, 25);
             label6.TabIndex = 10;
             label6.Text = "画像";
-            label6.Click += label6_Click;
             // 
             // pbPicture
             // 
@@ -269,7 +262,6 @@
             btAddReport.TabIndex = 14;
             btAddReport.Text = "追加";
             btAddReport.UseVisualStyleBackColor = true;
-            btAddReport.Click += button4_Click;
             // 
             // btModifyReport
             // 

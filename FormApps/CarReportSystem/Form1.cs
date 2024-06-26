@@ -1,39 +1,21 @@
+using System.ComponentModel;
+
 namespace CarReportSystem {
     public partial class Form1 : Form {
+
+        //カーレポート管理用リスト
+        BindingList<CarReport>listCarReports = new BindingList<CarReport>();
+
         public Form1() {
             InitializeComponent();
+            dgvCarReport.DataSource = listCarReports;
         }
 
-        private void label1_Click(object sender, EventArgs e) {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e) {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e) {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e) {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e) {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e) {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e) {
-
+        private void btAddReport_Click(object sender, EventArgs e) {
+            CarReport carReport = new CarReport {
+                Date = dtpDate.Value,
+            };
+            listCarReports.Add(carReport);
         }
     }
 }
