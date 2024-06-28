@@ -59,7 +59,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Yu Gothic UI", 14F);
-            label1.Location = new Point(58, 31);
+            label1.Location = new Point(39, 32);
             label1.Name = "label1";
             label1.Size = new Size(50, 25);
             label1.TabIndex = 0;
@@ -68,7 +68,7 @@
             // dtpDate
             // 
             dtpDate.Font = new Font("Yu Gothic UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 128);
-            dtpDate.Location = new Point(114, 25);
+            dtpDate.Location = new Point(95, 26);
             dtpDate.Name = "dtpDate";
             dtpDate.Size = new Size(200, 33);
             dtpDate.TabIndex = 1;
@@ -77,7 +77,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Yu Gothic UI", 14F);
-            label2.Location = new Point(39, 73);
+            label2.Location = new Point(20, 74);
             label2.Name = "label2";
             label2.Size = new Size(69, 25);
             label2.TabIndex = 2;
@@ -86,7 +86,7 @@
             // cbAuther
             // 
             cbAuther.FormattingEnabled = true;
-            cbAuther.Location = new Point(114, 75);
+            cbAuther.Location = new Point(95, 76);
             cbAuther.Name = "cbAuther";
             cbAuther.Size = new Size(236, 23);
             cbAuther.TabIndex = 3;
@@ -95,7 +95,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Yu Gothic UI", 14F);
-            label3.Location = new Point(39, 123);
+            label3.Location = new Point(20, 124);
             label3.Name = "label3";
             label3.Size = new Size(63, 25);
             label3.TabIndex = 4;
@@ -105,7 +105,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Yu Gothic UI", 14F);
-            label4.Location = new Point(52, 173);
+            label4.Location = new Point(33, 174);
             label4.Name = "label4";
             label4.Size = new Size(50, 25);
             label4.TabIndex = 5;
@@ -115,7 +115,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Yu Gothic UI", 14F);
-            label5.Location = new Point(35, 214);
+            label5.Location = new Point(16, 215);
             label5.Name = "label5";
             label5.Size = new Size(67, 25);
             label5.TabIndex = 6;
@@ -124,7 +124,7 @@
             // cbCarName
             // 
             cbCarName.FormattingEnabled = true;
-            cbCarName.Location = new Point(114, 173);
+            cbCarName.Location = new Point(95, 174);
             cbCarName.Name = "cbCarName";
             cbCarName.Size = new Size(224, 23);
             cbCarName.TabIndex = 7;
@@ -137,7 +137,7 @@
             groupBox1.Controls.Add(rbNissan);
             groupBox1.Controls.Add(rbSubaru);
             groupBox1.Controls.Add(rbHonda);
-            groupBox1.Location = new Point(114, 104);
+            groupBox1.Location = new Point(95, 105);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(349, 51);
             groupBox1.TabIndex = 8;
@@ -211,7 +211,7 @@
             // 
             // tbReport
             // 
-            tbReport.Location = new Point(114, 214);
+            tbReport.Location = new Point(95, 215);
             tbReport.Name = "tbReport";
             tbReport.Size = new Size(335, 96);
             tbReport.TabIndex = 9;
@@ -221,7 +221,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Yu Gothic UI", 14F);
-            label6.Location = new Point(487, 31);
+            label6.Location = new Point(468, 32);
             label6.Name = "label6";
             label6.Size = new Size(50, 25);
             label6.TabIndex = 10;
@@ -230,7 +230,7 @@
             // pbPicture
             // 
             pbPicture.BackColor = SystemColors.ActiveBorder;
-            pbPicture.Location = new Point(487, 62);
+            pbPicture.Location = new Point(468, 63);
             pbPicture.Name = "pbPicture";
             pbPicture.Size = new Size(208, 195);
             pbPicture.TabIndex = 11;
@@ -238,7 +238,7 @@
             // 
             // btPicOpen
             // 
-            btPicOpen.Location = new Point(560, 33);
+            btPicOpen.Location = new Point(541, 34);
             btPicOpen.Name = "btPicOpen";
             btPicOpen.Size = new Size(62, 23);
             btPicOpen.TabIndex = 12;
@@ -247,7 +247,7 @@
             // 
             // btPicDelete
             // 
-            btPicDelete.Location = new Point(633, 33);
+            btPicDelete.Location = new Point(614, 34);
             btPicDelete.Name = "btPicDelete";
             btPicDelete.Size = new Size(62, 23);
             btPicDelete.TabIndex = 13;
@@ -256,7 +256,8 @@
             // 
             // btAddReport
             // 
-            btAddReport.Location = new Point(487, 276);
+            btAddReport.Font = new Font("Yu Gothic UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 128);
+            btAddReport.Location = new Point(468, 277);
             btAddReport.Name = "btAddReport";
             btAddReport.Size = new Size(62, 34);
             btAddReport.TabIndex = 14;
@@ -265,7 +266,8 @@
             // 
             // btModifyReport
             // 
-            btModifyReport.Location = new Point(560, 276);
+            btModifyReport.Font = new Font("Yu Gothic UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 128);
+            btModifyReport.Location = new Point(541, 277);
             btModifyReport.Name = "btModifyReport";
             btModifyReport.Size = new Size(62, 34);
             btModifyReport.TabIndex = 15;
@@ -274,7 +276,8 @@
             // 
             // btDeleteReport
             // 
-            btDeleteReport.Location = new Point(633, 276);
+            btDeleteReport.Font = new Font("Yu Gothic UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 128);
+            btDeleteReport.Location = new Point(614, 277);
             btDeleteReport.Name = "btDeleteReport";
             btDeleteReport.Size = new Size(62, 34);
             btDeleteReport.TabIndex = 16;
@@ -285,7 +288,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Yu Gothic UI", 14F);
-            label7.Location = new Point(52, 328);
+            label7.Location = new Point(33, 329);
             label7.Name = "label7";
             label7.Size = new Size(50, 25);
             label7.TabIndex = 17;
@@ -294,14 +297,14 @@
             // dgvCarReport
             // 
             dgvCarReport.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCarReport.Location = new Point(114, 328);
+            dgvCarReport.Location = new Point(95, 329);
             dgvCarReport.Name = "dgvCarReport";
             dgvCarReport.Size = new Size(581, 158);
             dgvCarReport.TabIndex = 18;
             // 
             // btReportSave
             // 
-            btReportSave.Location = new Point(40, 450);
+            btReportSave.Location = new Point(21, 451);
             btReportSave.Name = "btReportSave";
             btReportSave.Size = new Size(62, 36);
             btReportSave.TabIndex = 19;
@@ -310,7 +313,7 @@
             // 
             // btReportOpen
             // 
-            btReportOpen.Location = new Point(40, 405);
+            btReportOpen.Location = new Point(21, 406);
             btReportOpen.Name = "btReportOpen";
             btReportOpen.Size = new Size(62, 36);
             btReportOpen.TabIndex = 20;
@@ -321,7 +324,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(721, 499);
+            ClientSize = new Size(699, 499);
             Controls.Add(btReportOpen);
             Controls.Add(btReportSave);
             Controls.Add(dgvCarReport);

@@ -78,7 +78,7 @@ namespace Test02 {
         //問題３　奇数のみを降順に並べて表示（遅延実行とする）
         //　　　　出力結果【91 87 53 35 31 17】
         private static void Exercise03(List<int> numbers) {
-            //numbers.ForEach(n => Console.WriteLine(n => n % 2 == 1));
+            numbers.ForEach(n => Console.WriteLine(n => n % 2 == 1));
         }
 
         //問題４　10以上50以下の数字のみを表示（即時実行でも可とする）
@@ -92,7 +92,7 @@ namespace Test02 {
         //問題５　平均年齢を表示
         //　　　　出力結果【30.2才】
         private static void Exercise05(List<Person> persons) {
-            double result = list.Average();
+            numbers.Average(); // 3
 
 
         }
