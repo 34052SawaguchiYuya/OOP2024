@@ -5,33 +5,36 @@ namespace Test01 {
     class ScoreCounter {
         private IEnumerable<Student> _score;
 
-        // コンストラクタ
+        //コンストラクタ
         public ScoreCounter(string filePath) {
-            _score = ReadScore(filePath);
+            _score = Score(filePath);
         }
 
-
-        //メソッドの概要： 
-        private static IEnumerable<Student> ReadScore(string filePath) {
-
+        //メソッドの概要：スコアデータを読み込み、Studentオブジェクトのリストを返す
+        private static IEnumerable<Student> Score(string filePath) {
+            List<Student> scores = new List<Student>();
+            string[] lines = File.ReadAllLines(filePath);
+            foreach (string line in lines) {
+                string[] item = line.Split(',');
+                Student score = new Student() {
+                    Name = item[0],Subject = item[1],Score = int.Parse(item[2]),
+                };
+                scores.Add(score);
+            }
+            return scores;
         }
 
-
-
-
-    }
-
-    //メソッドの概要： 
-    public IDictionary<string, int> GetPerStudentScore() {
-        var reader = new StreamReader(filePath);
-        foreach (KeyValuePair<string, int> obj in amountPerStore) {
-            {
-                if (args.Length >= 1 && args[0] == "-tom") {
-                    //フィートからメートルへの対応表を出力
-                    PrintFeetToMeterList(int.Parse(args[1]), int.Parse(args[2]));
+        public IDictionary<string, int> StudentScore() {
+            var dict = new Dictionary<string, int>();
+            foreach (var sale in _score) {
+                if (dict.ContainsKey(sale.Subject)) {
+                    dict[sale.Subject] += sale.Score;
                 } else {
-                    //メートルからフィールドへの対応表を出力
-                    PrintMeterToFeetList(int.Parse(args[1]), int.Parse(args[2]));
+                    dict[sale.Subject] = sale.Score;
                 }
             }
+            return dict;
         }
+
+    }
+}

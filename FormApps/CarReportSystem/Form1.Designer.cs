@@ -26,7 +26,7 @@
             label1 = new Label();
             dtpDate = new DateTimePicker();
             label2 = new Label();
-            cbAuther = new ComboBox();
+            cbAuthor = new ComboBox();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
@@ -34,14 +34,14 @@
             groupBox1 = new GroupBox();
             rbOther = new RadioButton();
             rbToyota = new RadioButton();
-            rbyunyuu = new RadioButton();
+            rbImport = new RadioButton();
             rbNissan = new RadioButton();
             rbSubaru = new RadioButton();
             rbHonda = new RadioButton();
             tbReport = new Button();
             label6 = new Label();
             pbPicture = new PictureBox();
-            btPicOpen = new Button();
+            ofdPicFileOpen = new Button();
             btPicDelete = new Button();
             btAddReport = new Button();
             btModifyReport = new Button();
@@ -83,13 +83,13 @@
             label2.TabIndex = 2;
             label2.Text = "記録者";
             // 
-            // cbAuther
+            // cbAuthor
             // 
-            cbAuther.FormattingEnabled = true;
-            cbAuther.Location = new Point(95, 76);
-            cbAuther.Name = "cbAuther";
-            cbAuther.Size = new Size(236, 23);
-            cbAuther.TabIndex = 3;
+            cbAuthor.FormattingEnabled = true;
+            cbAuthor.Location = new Point(95, 76);
+            cbAuthor.Name = "cbAuthor";
+            cbAuthor.Size = new Size(236, 23);
+            cbAuthor.TabIndex = 3;
             // 
             // label3
             // 
@@ -133,7 +133,7 @@
             // 
             groupBox1.Controls.Add(rbOther);
             groupBox1.Controls.Add(rbToyota);
-            groupBox1.Controls.Add(rbyunyuu);
+            groupBox1.Controls.Add(rbImport);
             groupBox1.Controls.Add(rbNissan);
             groupBox1.Controls.Add(rbSubaru);
             groupBox1.Controls.Add(rbHonda);
@@ -165,16 +165,16 @@
             rbToyota.Text = "トヨタ";
             rbToyota.UseVisualStyleBackColor = true;
             // 
-            // rbyunyuu
+            // rbImport
             // 
-            rbyunyuu.AutoSize = true;
-            rbyunyuu.Location = new Point(227, 19);
-            rbyunyuu.Name = "rbyunyuu";
-            rbyunyuu.Size = new Size(61, 19);
-            rbyunyuu.TabIndex = 13;
-            rbyunyuu.TabStop = true;
-            rbyunyuu.Text = "輸入車";
-            rbyunyuu.UseVisualStyleBackColor = true;
+            rbImport.AutoSize = true;
+            rbImport.Location = new Point(227, 19);
+            rbImport.Name = "rbImport";
+            rbImport.Size = new Size(61, 19);
+            rbImport.TabIndex = 13;
+            rbImport.TabStop = true;
+            rbImport.Text = "輸入車";
+            rbImport.UseVisualStyleBackColor = true;
             // 
             // rbNissan
             // 
@@ -233,17 +233,18 @@
             pbPicture.Location = new Point(468, 63);
             pbPicture.Name = "pbPicture";
             pbPicture.Size = new Size(208, 195);
+            pbPicture.SizeMode = PictureBoxSizeMode.Zoom;
             pbPicture.TabIndex = 11;
             pbPicture.TabStop = false;
             // 
-            // btPicOpen
+            // ofdPicFileOpen
             // 
-            btPicOpen.Location = new Point(541, 34);
-            btPicOpen.Name = "btPicOpen";
-            btPicOpen.Size = new Size(62, 23);
-            btPicOpen.TabIndex = 12;
-            btPicOpen.Text = "開く…";
-            btPicOpen.UseVisualStyleBackColor = true;
+            ofdPicFileOpen.Location = new Point(541, 34);
+            ofdPicFileOpen.Name = "ofdPicFileOpen";
+            ofdPicFileOpen.Size = new Size(62, 23);
+            ofdPicFileOpen.TabIndex = 12;
+            ofdPicFileOpen.Text = "開く…";
+            ofdPicFileOpen.UseVisualStyleBackColor = true;
             // 
             // btPicDelete
             // 
@@ -253,6 +254,7 @@
             btPicDelete.TabIndex = 13;
             btPicDelete.Text = "削除";
             btPicDelete.UseVisualStyleBackColor = true;
+            btPicDelete.Click += btPicDelete_Click;
             // 
             // btAddReport
             // 
@@ -263,6 +265,7 @@
             btAddReport.TabIndex = 14;
             btAddReport.Text = "追加";
             btAddReport.UseVisualStyleBackColor = true;
+            btAddReport.Click += btAddReport_Click;
             // 
             // btModifyReport
             // 
@@ -273,6 +276,7 @@
             btModifyReport.TabIndex = 15;
             btModifyReport.Text = "修正";
             btModifyReport.UseVisualStyleBackColor = true;
+            btModifyReport.Click += btModifyReport_Click;
             // 
             // btDeleteReport
             // 
@@ -283,6 +287,7 @@
             btDeleteReport.TabIndex = 16;
             btDeleteReport.Text = "削除";
             btDeleteReport.UseVisualStyleBackColor = true;
+            btDeleteReport.Click += btDeleteReport_Click;
             // 
             // label7
             // 
@@ -299,6 +304,7 @@
             dgvCarReport.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvCarReport.Location = new Point(95, 329);
             dgvCarReport.Name = "dgvCarReport";
+            dgvCarReport.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvCarReport.Size = new Size(581, 158);
             dgvCarReport.TabIndex = 18;
             // 
@@ -333,7 +339,7 @@
             Controls.Add(btModifyReport);
             Controls.Add(btAddReport);
             Controls.Add(btPicDelete);
-            Controls.Add(btPicOpen);
+            Controls.Add(ofdPicFileOpen);
             Controls.Add(pbPicture);
             Controls.Add(label6);
             Controls.Add(tbReport);
@@ -342,7 +348,7 @@
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(cbAuther);
+            Controls.Add(cbAuthor);
             Controls.Add(label2);
             Controls.Add(dtpDate);
             Controls.Add(label1);
@@ -361,7 +367,7 @@
         private Label label1;
         private DateTimePicker dtpDate;
         private Label label2;
-        private ComboBox cbAuther;
+        private ComboBox cbAuthor;
         private Label label3;
         private Label label4;
         private Label label5;
@@ -369,14 +375,14 @@
         private GroupBox groupBox1;
         private RadioButton rbOther;
         private RadioButton rbToyota;
-        private RadioButton rbyunyuu;
+        private RadioButton rbImport;
         private RadioButton rbNissan;
         private RadioButton rbSubaru;
         private RadioButton rbHonda;
         private Button tbReport;
         private Label label6;
         private PictureBox pbPicture;
-        private Button btPicOpen;
+        private Button ofdPicFileOpen;
         private Button btPicDelete;
         private Button btAddReport;
         private Button btModifyReport;
