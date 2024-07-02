@@ -25,35 +25,35 @@ namespace Test02 {
                 new Person{Name = "片山新之助",Age = 35, Height=176,Weight=65},
             };
             #region テスト用ドライバ
-            Console.WriteLine("問題１：合計値");
+            Console.WriteLine("問題１：平均値を表示");
             Exercise01(numbers);
             Console.WriteLine("\n-----");
 
-            Console.WriteLine("問題２：偶数の最大値");
+            Console.WriteLine("問題２：奇数の最小値を表示");
             Exercise02(numbers);
             Console.WriteLine("\n-----");
 
-            Console.WriteLine("問題３：奇数の降順");
+            Console.WriteLine("問題３：偶数のみを昇順に並べて表示");
             Exercise03(numbers);
             Console.WriteLine("\n-----");
 
-            Console.WriteLine("問題４：10 以上 50 以下のみ");
+            Console.WriteLine("問題４：0以上30未満の数字のみを表示");
             Exercise04(numbers);
             Console.WriteLine("\n-----");
 
-            Console.WriteLine("問題５：平均年齢");
+            Console.WriteLine("問題５：最高年齢を表示");
             Exercise05(persons);
             Console.WriteLine("\n-----");
 
-            Console.WriteLine("問題６：身長170cm以上の体重平均");
+            Console.WriteLine("問題６：年齢20代だけの平均身長を表示");
             Exercise06(persons);
             Console.WriteLine("\n-----");
 
-            Console.WriteLine("問題７：体重70kg以下の人を体重の昇順で全て表示（名前と体重を出力）");
+            Console.WriteLine("問題７：身長170cm以上の「名前と年齢と体重」を全員表示");
             Exercise07(persons);
             Console.WriteLine("\n-----");
 
-            Console.WriteLine("問題８：名前に「山」の漢字が含まれている人全て表示（名前のみ出力）");
+            Console.WriteLine("問題８：名前の漢字４文字の人を全て表示");
             Exercise08(persons);
             Console.WriteLine("\n-----");
             #endregion
