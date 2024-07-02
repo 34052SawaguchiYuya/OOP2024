@@ -106,14 +106,14 @@ namespace Test02 {
         //問題６　年齢20代だけの平均身長を表示
         private static void Exercise06(List<Person> persons) {
             var light = persons.FindAll(person => person.Age >= 20 && person.Age <= 29).Average(person => person.Height);
-            Console.WriteLine(light + "cm");
+            Console.WriteLine(light);
         }
 
         //問題７　身長170cm以上の「名前と年齢と体重」を全員表示
         private static void Exercise07(List<Person> persons) {
             var lightweightPeople = persons.FindAll(person => person.Height >= 170);
             foreach (var person in lightweightPeople) {
-                Console.WriteLine($"{person.Name}{person.Age} " + "才" +" {person.Weight} "+ "kg");
+                Console.WriteLine($"{person.Name}" + $"({person.Age})体重：" + $"{person.Weight}");
             }
         }
 

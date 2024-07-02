@@ -10,23 +10,32 @@ namespace Test01 {
             _score = ReadScore(filePath);
         }
 
-
         //メソッドの概要： 
         private static IEnumerable<Student> ReadScore(string filePath) {
-
-
-
-
-
+            List<Student> scores = new List<Student>();
+            string[] lines = File.ReadAllLines(filePath);
+            foreach (string line in lines) {
+                string[] item = line.Split(',');
+                Student score = new Student() {
+                    Name = item[0], Subject = item[1],Score = int.Parse(item[2]),
+                };
+                scores.Add(score);
+            }
+            return scores;
         }
 
         //メソッドの概要： 
         public IDictionary<string, int> GetPerStudentScore() {
-
-
-
-
-
+            var dict = new Dictionary<string, int>();
+            foreach (var sale in _score) {
+                if (dict.ContainsKey(sale.Subject)) {
+                    dict[sale.Subject] += sale.Score;
+                } else {
+                    dict[sale.Subject] = sale.Score;
+                }
+            }
+            return dict;
         }
+
     }
 }
