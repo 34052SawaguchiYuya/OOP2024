@@ -9,7 +9,7 @@ namespace CarReportSystem {
     public class CarReport {
         //列挙型
         public enum MakerGroup {
-            なし,
+            なし, 
             トヨタ,
             日産,
             ホンダ,
