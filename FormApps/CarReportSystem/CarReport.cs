@@ -5,9 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CarReportSystem {
+    [Serializable]
     public class CarReport {
         //列挙型
         public enum MakerGroup {
+            なし,
             トヨタ,
             日産,
             ホンダ,
@@ -24,7 +26,7 @@ namespace CarReportSystem {
         public MakerGroup Maker { get; set; }   //メーカー
         [System.ComponentModel.DisplayName("車名")]
         public string CarName { get; set; } = string.Empty; //車名
-        [System.ComponentModel.DisplayName("レポート")]
+        [System.ComponentModel.DisplayName("レポート")] 
         public string Report { get; set; } = string.Empty; //レポート
         //[System.ComponentModel.Browsable(false)]
         public Image? Picture { get; set; }  //画像
