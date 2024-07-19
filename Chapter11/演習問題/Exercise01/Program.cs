@@ -57,7 +57,7 @@ namespace Exercise01 {
         }
 
         private static void Exercise1_4(string file, string newfile) {
-            var xdoc = XDocument.Load(file);
+            var xdoc = XDocument.Load(file); 
             var sport = xdoc.Root.Elements();
         }
     }
