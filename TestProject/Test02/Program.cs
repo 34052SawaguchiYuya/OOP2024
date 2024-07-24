@@ -88,6 +88,14 @@ namespace Test02 {
             var sortedOddNumbers = numbers.Where(n => n % 2 != 0).OrderByDescending(n => n);
             foreach (var oddNumber in sortedOddNumbers) {
                 Console.Write(oddNumber + " ");
+
+                /*昇順
+            List<int> oddNumbers = numbers.FindAll(num => num % 2 != 0);
+            oddNumbers.Sort();
+
+            foreach (int item in oddNumbers) {
+                Console.Write(item + " ");
+            }*/
             }
         }
 

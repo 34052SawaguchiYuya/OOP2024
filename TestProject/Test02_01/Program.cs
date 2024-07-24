@@ -71,7 +71,7 @@ namespace Test02 {
             Console.WriteLine(avg);
         }
 
-    
+
 
         //問題２　奇数の最小値を表示
         private static void Exercise02(List<int> numbers) {
@@ -81,9 +81,11 @@ namespace Test02 {
         }
         //問題３　偶数のみを昇順に並べて表示（遅延実行とする）
         private static void Exercise03(List<int> numbers) {
-            var sortedOddNumbers = numbers.Where(n => n % 2 == 0).OrderByDescending(n => n);
-            foreach (var oddNumber in sortedOddNumbers) {
-                Console.Write(oddNumber + " ");
+            List<int> oddNumbers = numbers.FindAll(n => n % 2 == 0);
+            oddNumbers.Sort();
+
+            foreach (int item in oddNumbers) {
+                Console.Write(item + " ");
             }
         }
 
@@ -119,10 +121,11 @@ namespace Test02 {
 
         //問題８　名前の漢字４文字の人を全て表示
         private static void Exercise08(List<Person> persons) {
-            var selected = persons.Where(b => b.Name.Contains("山"));
-            foreach (var names in selected)
-                Console.WriteLine(names.Name);
+            var fourCharacterNames = persons.Where(p => p.Name.Length == 4);
 
+            foreach (var person in fourCharacterNames) {
+                Console.WriteLine(person.Name);
+            }
         }
     }
 }
