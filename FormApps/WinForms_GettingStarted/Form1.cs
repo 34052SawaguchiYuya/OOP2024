@@ -39,10 +39,9 @@ namespace WinForms_GettingStarted {
         }
 
 
-
-        private void tbRssUrl_TextChanged(object sender, EventArgs e) {
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) {
             string url;
-            if (dic.TryGetValue(cbRssUrl.Text, out url)) {
+            if (dic.TryGetValue(tttt.Text, out url)) {
                 currentUrl = url;
 
                 using (var wc = new WebClient()) {
@@ -55,7 +54,7 @@ namespace WinForms_GettingStarted {
 
         private void btGet_Click(object sender, EventArgs e) {
             string url;
-            if (dic.TryGetValue(cbRssUrl.Text, out url)) {
+            if (dic.TryGetValue(ttt.Text, out url)) {
                 //URLの保存
                 currentUrl = url;
 
@@ -78,7 +77,7 @@ namespace WinForms_GettingStarted {
 
 
         private void webBrowser1_Click(object sender, WebBrowserDocumentCompletedEventArgs e) {
-            if (webBrowser1 != null && webBrowser1 != null) {
+            if (webView21 != null && webView21 != null) {
                 Console.WriteLine("URLが表示されていない。");
             } else {
                 Console.WriteLine("");
@@ -92,6 +91,22 @@ namespace WinForms_GettingStarted {
         public class ItemData {
             public string Title { get; set; }
             public string Link { get; set; }
+        }
+
+        private void webView21_Click(object sender, EventArgs e) {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e) {
+
+        }
+
+        private void ttt_SelectedIndexChanged(object sender, EventArgs e) {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e) {
+
         }
     }
 }

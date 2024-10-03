@@ -24,14 +24,14 @@
         /// </summary>
         private void InitializeComponent() {
             this.btGet = new System.Windows.Forms.Button();
-            this.tbRssUrl = new System.Windows.Forms.TextBox();
-            this.cbRssUrl = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.webBrowser1 = new Microsoft.Web.WebView2.WinForms.WebView2();
-            ((System.ComponentModel.ISupportInitialize)(this.webBrowser1)).BeginInit();
+            this.tttt = new System.Windows.Forms.ComboBox();
+            this.ttt = new System.Windows.Forms.ComboBox();
+            this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
+            ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
             this.SuspendLayout();
             // 
             // btGet
@@ -44,22 +44,6 @@
             this.btGet.UseVisualStyleBackColor = true;
             this.btGet.Click += new System.EventHandler(this.btGet_Click);
             // 
-            // tbRssUrl
-            // 
-            this.tbRssUrl.Location = new System.Drawing.Point(54, 48);
-            this.tbRssUrl.Multiline = true;
-            this.tbRssUrl.Name = "tbRssUrl";
-            this.tbRssUrl.Size = new System.Drawing.Size(428, 19);
-            this.tbRssUrl.TabIndex = 2;
-            this.tbRssUrl.TextChanged += new System.EventHandler(this.tbRssUrl_TextChanged);
-            // 
-            // cbRssUrl
-            // 
-            this.cbRssUrl.Location = new System.Drawing.Point(584, 48);
-            this.cbRssUrl.Name = "cbRssUrl";
-            this.cbRssUrl.Size = new System.Drawing.Size(417, 19);
-            this.cbRssUrl.TabIndex = 3;
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(808, 19);
@@ -68,15 +52,17 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "登録";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(637, 73);
+            this.listBox1.Location = new System.Drawing.Point(566, 73);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(364, 556);
+            this.listBox1.Size = new System.Drawing.Size(435, 544);
             this.listBox1.TabIndex = 5;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -98,35 +84,54 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "お気に入り名称：";
             // 
-            // webBrowser1
+            // tttt
             // 
-            this.webBrowser1.AllowExternalDrop = true;
-            this.webBrowser1.CreationProperties = null;
-            this.webBrowser1.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.webBrowser1.Location = new System.Drawing.Point(12, 73);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(619, 553);
-            this.webBrowser1.Source = new System.Uri("https://www.yahoo.co.jp/", System.UriKind.Absolute);
-            this.webBrowser1.TabIndex = 8;
-            this.webBrowser1.ZoomFactor = 1D;
+            this.tttt.FormattingEnabled = true;
+            this.tttt.Location = new System.Drawing.Point(75, 47);
+            this.tttt.Name = "tttt";
+            this.tttt.Size = new System.Drawing.Size(416, 20);
+            this.tttt.TabIndex = 9;
+            this.tttt.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // ttt
+            // 
+            this.ttt.FormattingEnabled = true;
+            this.ttt.Location = new System.Drawing.Point(586, 47);
+            this.ttt.Name = "ttt";
+            this.ttt.Size = new System.Drawing.Size(396, 20);
+            this.ttt.TabIndex = 10;
+            this.ttt.SelectedIndexChanged += new System.EventHandler(this.ttt_SelectedIndexChanged);
+            // 
+            // webView21
+            // 
+            this.webView21.AllowExternalDrop = true;
+            this.webView21.BackColor = System.Drawing.SystemColors.Window;
+            this.webView21.CreationProperties = null;
+            this.webView21.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView21.Location = new System.Drawing.Point(39, 73);
+            this.webView21.Name = "webView21";
+            this.webView21.Size = new System.Drawing.Size(486, 543);
+            this.webView21.TabIndex = 11;
+            this.webView21.ZoomFactor = 1D;
+            this.webView21.Click += new System.EventHandler(this.webView21_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.ClientSize = new System.Drawing.Size(1038, 638);
-            this.Controls.Add(this.webBrowser1);
+            this.ClientSize = new System.Drawing.Size(1028, 657);
+            this.Controls.Add(this.webView21);
+            this.Controls.Add(this.ttt);
+            this.Controls.Add(this.tttt);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.cbRssUrl);
-            this.Controls.Add(this.tbRssUrl);
             this.Controls.Add(this.btGet);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.webBrowser1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webView21)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,13 +139,13 @@
 
         #endregion
         private System.Windows.Forms.Button btGet;
-        private System.Windows.Forms.TextBox tbRssUrl;
-        private System.Windows.Forms.TextBox cbRssUrl;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private Microsoft.Web.WebView2.WinForms.WebView2 webBrowser1;
+        private System.Windows.Forms.ComboBox tttt;
+        private System.Windows.Forms.ComboBox ttt;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
     }
 }
 
