@@ -58,7 +58,7 @@ namespace Section03 {
 
         private async void bt_16_9_Click(object sender, EventArgs e) {
             toolStripStatusLabel1.Text = "";
-            var elapsed = await DoSomethingAsync2());
+            var elapsed = await DoSomethingAsync2();
             //await DoSomething();
             toolStripStatusLabel1.Text = $"{elapsed}ミリ秒";
         }
@@ -71,6 +71,10 @@ namespace Section03 {
             });
             sw.Stop();
             return sw.ElapsedMilliseconds;
+        }
+
+        private void Form1_Load(object sender, EventArgs e) {
+
         }
     }
 }

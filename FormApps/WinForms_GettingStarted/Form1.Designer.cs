@@ -23,46 +23,46 @@
         /// コード エディターで変更しないでください。
         /// </summary>
         private void InitializeComponent() {
-            this.btGet = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btToroku = new System.Windows.Forms.Button();
+            this.btdelete = new System.Windows.Forms.Button();
+            this.lbRssTitle = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.tttt = new System.Windows.Forms.ComboBox();
-            this.ttt = new System.Windows.Forms.ComboBox();
+            this.cbRssUrl = new System.Windows.Forms.ComboBox();
+            this.cbName = new System.Windows.Forms.ComboBox();
             this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
             ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
             this.SuspendLayout();
             // 
-            // btGet
+            // btToroku
             // 
-            this.btGet.Location = new System.Drawing.Point(295, 19);
-            this.btGet.Name = "btGet";
-            this.btGet.Size = new System.Drawing.Size(78, 23);
-            this.btGet.TabIndex = 1;
-            this.btGet.Text = "取得";
-            this.btGet.UseVisualStyleBackColor = true;
-            this.btGet.Click += new System.EventHandler(this.btGet_Click);
+            this.btToroku.Location = new System.Drawing.Point(295, 19);
+            this.btToroku.Name = "btToroku";
+            this.btToroku.Size = new System.Drawing.Size(78, 23);
+            this.btToroku.TabIndex = 1;
+            this.btToroku.Text = "取得";
+            this.btToroku.UseVisualStyleBackColor = true;
+            this.btToroku.Click += new System.EventHandler(this.btToroku_Click);
             // 
-            // button2
+            // btdelete
             // 
-            this.button2.Location = new System.Drawing.Point(808, 19);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "登録";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btdelete.Location = new System.Drawing.Point(808, 19);
+            this.btdelete.Name = "btdelete";
+            this.btdelete.Size = new System.Drawing.Size(75, 23);
+            this.btdelete.TabIndex = 4;
+            this.btdelete.Text = "登録";
+            this.btdelete.UseVisualStyleBackColor = true;
+            this.btdelete.Click += new System.EventHandler(this.btdelete_Click_1);
             // 
-            // listBox1
+            // lbRssTitle
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(566, 73);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(435, 544);
-            this.listBox1.TabIndex = 5;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.lbRssTitle.FormattingEnabled = true;
+            this.lbRssTitle.ItemHeight = 12;
+            this.lbRssTitle.Location = new System.Drawing.Point(566, 73);
+            this.lbRssTitle.Name = "lbRssTitle";
+            this.lbRssTitle.Size = new System.Drawing.Size(435, 544);
+            this.lbRssTitle.TabIndex = 5;
+            this.lbRssTitle.SelectedIndexChanged += new System.EventHandler(this.lbRssTitle_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -84,23 +84,23 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "お気に入り名称：";
             // 
-            // tttt
+            // cbRssUrl
             // 
-            this.tttt.FormattingEnabled = true;
-            this.tttt.Location = new System.Drawing.Point(75, 47);
-            this.tttt.Name = "tttt";
-            this.tttt.Size = new System.Drawing.Size(416, 20);
-            this.tttt.TabIndex = 9;
-            this.tttt.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cbRssUrl.FormattingEnabled = true;
+            this.cbRssUrl.Location = new System.Drawing.Point(75, 47);
+            this.cbRssUrl.Name = "cbRssUrl";
+            this.cbRssUrl.Size = new System.Drawing.Size(416, 20);
+            this.cbRssUrl.TabIndex = 9;
+            this.cbRssUrl.SelectedIndexChanged += new System.EventHandler(this.cbRssUrl_SelectedIndexChanged_1);
             // 
-            // ttt
+            // cbName
             // 
-            this.ttt.FormattingEnabled = true;
-            this.ttt.Location = new System.Drawing.Point(586, 47);
-            this.ttt.Name = "ttt";
-            this.ttt.Size = new System.Drawing.Size(396, 20);
-            this.ttt.TabIndex = 10;
-            this.ttt.SelectedIndexChanged += new System.EventHandler(this.ttt_SelectedIndexChanged);
+            this.cbName.FormattingEnabled = true;
+            this.cbName.Location = new System.Drawing.Point(586, 47);
+            this.cbName.Name = "cbName";
+            this.cbName.Size = new System.Drawing.Size(396, 20);
+            this.cbName.TabIndex = 10;
+            this.cbName.SelectedIndexChanged += new System.EventHandler(this.cbName_SelectedIndexChanged);
             // 
             // webView21
             // 
@@ -122,15 +122,16 @@
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(1028, 657);
             this.Controls.Add(this.webView21);
-            this.Controls.Add(this.ttt);
-            this.Controls.Add(this.tttt);
+            this.Controls.Add(this.cbName);
+            this.Controls.Add(this.cbRssUrl);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btGet);
+            this.Controls.Add(this.lbRssTitle);
+            this.Controls.Add(this.btdelete);
+            this.Controls.Add(this.btToroku);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.webView21)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -138,13 +139,13 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btGet;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button btToroku;
+        private System.Windows.Forms.Button btdelete;
+        private System.Windows.Forms.ListBox lbRssTitle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox tttt;
-        private System.Windows.Forms.ComboBox ttt;
+        private System.Windows.Forms.ComboBox cbRssUrl;
+        private System.Windows.Forms.ComboBox cbName;
         private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
     }
 }
