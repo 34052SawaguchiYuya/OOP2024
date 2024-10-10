@@ -44,10 +44,10 @@ namespace WinForms_GettingStarted {
 
         }
 
-        private void btToroku_Click(object sender, EventArgs e) {
+        private void Syutoku_Click(object sender, EventArgs e) {
             var inputTitle = cbName.Text;
             var inputUrl = cbRssUrl.Text;
-
+            
 
             if (string.IsNullOrWhiteSpace(inputTitle) & string.IsNullOrWhiteSpace(inputUrl)) {
                 MessageBox.Show("URLを入力してください。");

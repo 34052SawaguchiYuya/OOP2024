@@ -23,7 +23,7 @@
         /// コード エディターで変更しないでください。
         /// </summary>
         private void InitializeComponent() {
-            this.btToroku = new System.Windows.Forms.Button();
+            this.Syutoku = new System.Windows.Forms.Button();
             this.btdelete = new System.Windows.Forms.Button();
             this.lbRssTitle = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -34,15 +34,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
             this.SuspendLayout();
             // 
-            // btToroku
+            // Syutoku
             // 
-            this.btToroku.Location = new System.Drawing.Point(295, 19);
-            this.btToroku.Name = "btToroku";
-            this.btToroku.Size = new System.Drawing.Size(78, 23);
-            this.btToroku.TabIndex = 1;
-            this.btToroku.Text = "取得";
-            this.btToroku.UseVisualStyleBackColor = true;
-            this.btToroku.Click += new System.EventHandler(this.btToroku_Click);
+            this.Syutoku.Location = new System.Drawing.Point(295, 19);
+            this.Syutoku.Name = "Syutoku";
+            this.Syutoku.Size = new System.Drawing.Size(78, 23);
+            this.Syutoku.TabIndex = 1;
+            this.Syutoku.Text = "取得";
+            this.Syutoku.UseVisualStyleBackColor = true;
             // 
             // btdelete
             // 
@@ -128,7 +127,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbRssTitle);
             this.Controls.Add(this.btdelete);
-            this.Controls.Add(this.btToroku);
+            this.Controls.Add(this.Syutoku);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -139,7 +138,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btToroku;
+        private System.Windows.Forms.Button Syutoku;
         private System.Windows.Forms.Button btdelete;
         private System.Windows.Forms.ListBox lbRssTitle;
         private System.Windows.Forms.Label label1;
