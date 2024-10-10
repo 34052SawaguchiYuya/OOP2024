@@ -35,10 +35,7 @@ namespace DistanceConverter {
             do {
                 Console.Write(msg + "=>");
                 var unit = Console.ReadLine();
-
                 converter = ConverterFactory.GetInstance(unit);
-
-
             }while(converter ==  null);
             return converter;
         }
