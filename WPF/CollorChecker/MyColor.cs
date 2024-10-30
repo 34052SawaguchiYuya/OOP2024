@@ -8,9 +8,12 @@ using System.Windows.Media;
 namespace CollorChecker {
     public class MyColor {
         public Color Color { get; set; }
-        public string Name { get; set; } = string.Empty;
+        public string Name { get; set; }
         public override string ToString() {
-            return string.Format("R:{0,3} G:{1,3}B:{2,3}", Color.R, Color.G, Color.B);      
+            return string.Format("R:{0,3} G:{1,3}B:{2,3}", Color.R, Color.G, Color.B);
+            //return "Brue";
         }
     }
 }
+/*<Button x:Name="stockButton" Grid.Row="0" Content="STOCK" FontSize="16" Margin="10" Click="stockButton_Click"/>
+        <*/
