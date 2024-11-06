@@ -9,9 +9,9 @@ namespace SampleUnitConverter {
     public class MetricUnit : DistanceUnit {
         private static List<MetricUnit> units = new List<MetricUnit> {
             new MetricUnit{Name = "mm",Coefficients = 1,},
-            new MetricUnit{Name = "mm",Coefficients = 10,},
-            new MetricUnit{Name = "mm",Coefficients = 10 * 100,},
-            new MetricUnit{Name = "mm",Coefficients = 10 * 100 * 1000,},
+            new MetricUnit{Name = "cm",Coefficients = 10,},
+            new MetricUnit{Name = "m",Coefficients = 10 * 100,},
+            new MetricUnit{Name = "km",Coefficients = 10 * 100 * 1000,},
         };
         public static ICollection<MetricUnit> Units { get { return units; } }
 

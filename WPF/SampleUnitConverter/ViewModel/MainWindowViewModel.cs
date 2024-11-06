@@ -15,23 +15,37 @@ namespace SampleUnitConverter {
         public ICommand MetricToImperialUnit { get; private set; }
 
         //上のComboBoxで選択されている値
-        public MetricUnit CurrentMetricunit { get; set; }
+        public MetricUnit CurrentMetricUnit { get; set; }
         //下のComboBoxで選択されている値
         public ImperialUnit CurrentImperialUnit { get; set; }
 
         public double MetricValue {
             get { return metricValue; }
-            set { metricValue = value; OnPropertyChanged(); }//値が変更されてら通知
-
+            set {
+                metricValue = value;
+                OnPropertyChanged();    //値が変更されたら通知
+            }
         }
+
         public double ImperialValue {
             get { return imperialValue; }
-            set { metricValue = value; OnPropertyChanged(); }//値が変更されてら通知
+            set {
+                imperialValue = value;
+                OnPropertyChanged();    //値が変更されたら通知
+            }
         }
+
         //コンストラクタ
         public MainWindowViewModel() {
             CurrentMetricUnit = MetricUnit.Units.First();
-            CurrentImperialUnit = MetricUnit.Units.First();
+            CurrentImperialUnit = ImperialUnit.Units.First();
+
+            MetricToImperialUnit = new DelegateCommand(() => 
+                            ImperialValue = CurrentImperialUnit.FromMetricUnit(CurrentImperialUnit,MetricValue));
+
+            ImperialUnitToMetric = new DelegateCommand(() => 
+                            MetricValue = CurrentMetricUnit.FromImperialUnit(CurrentImperialUnit,ImperialValue));
         }
+
     }
 }
