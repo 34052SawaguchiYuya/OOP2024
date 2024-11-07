@@ -15,6 +15,8 @@ namespace SampleUnitConverter {
         };
         public static ICollection<ImperialUnit> Units { get { return units; } }
 
+        //name="unit"
+        //name="value"
 
         public double FromMetricUnit(ImperialUnit unit, double value) {
             return (value * unit.Coefficients) / 25.4 / this.Coefficients;

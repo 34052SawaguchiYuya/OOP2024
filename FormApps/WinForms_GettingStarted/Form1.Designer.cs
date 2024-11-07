@@ -42,6 +42,7 @@
             this.Syutoku.TabIndex = 1;
             this.Syutoku.Text = "取得";
             this.Syutoku.UseVisualStyleBackColor = true;
+            this.Syutoku.Click += new System.EventHandler(this.Syutoku_Click_1);
             // 
             // btdelete
             // 
@@ -72,6 +73,7 @@
             this.label1.Size = new System.Drawing.Size(130, 12);
             this.label1.TabIndex = 6;
             this.label1.Text = "URL又はお気に入り名称：";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -82,6 +84,7 @@
             this.label2.Size = new System.Drawing.Size(86, 12);
             this.label2.TabIndex = 7;
             this.label2.Text = "お気に入り名称：";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // cbRssUrl
             // 
