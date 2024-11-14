@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace SampleUnitConverter {
     public class MainWindowViewModel : ViewModel {
-        private double gramValue, poundValue;
+        private double metricValue, imperialValue;
 
         //▲ボタンで呼ばれるコマンド
         public ICommand ImperialUnitToMetric { get; private set; }
@@ -20,25 +20,25 @@ namespace SampleUnitConverter {
         public ImperialUnit CurrentImperialUnit { get; set; }
 
         public double MetricValue {
-            get { return gramValue; }
+            get { return metricValue; }
             set {
-                gramValue = value;
+                metricValue = value;
                 OnPropertyChanged();    //値が変更されたら通知
             }
         }
 
         public double ImperialValue {
-            get { return poundValue; }
+            get { return imperialValue; }
             set {
-                poundValue = value;
+                imperialValue = value;
                 OnPropertyChanged();    //値が変更されたら通知
             }
         }
 
         //コンストラクタ
         public MainWindowViewModel() {
-            CurrentMetricUnit = MetricUnit.Units.First();
-            CurrentImperialUnit = ImperialUnit.Units.First();
+            CurrentMetricUnit = GramUnit.Units.First();
+            CurrentImperialUnit = PoundUnit.Units.First();
 
             MetricToImperialUnit = new DelegateCommand(() => 
                             ImperialValue = CurrentImperialUnit.FromMetricUnit(CurrentImperialUnit,MetricValue));
