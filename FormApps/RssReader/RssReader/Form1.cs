@@ -83,7 +83,6 @@ namespace RssReader {
                 var selectedTitle = listBox.SelectedItem.ToString();
                 var selectedItem = items.FirstOrDefault(item => item.Title == selectedTitle);
                 if (selectedItem != null) {
-                    webBrowser.Source = new Uri(selectedItem.Link);
                 }
             }
         }
