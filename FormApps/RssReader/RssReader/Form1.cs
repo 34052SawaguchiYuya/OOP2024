@@ -59,6 +59,7 @@ namespace RssReader {
                 foreach (var item in items) {
                     listBox.Items.Add(item.Title);
                 }
+
             }
         }
 
