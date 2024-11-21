@@ -87,7 +87,7 @@ namespace RssReader {
                 if (selectedItem != null) {
                 }
             }
-        }
+        } 
 
         private void CbRssUrl_SelectedIndexChanged(object sender, EventArgs e) {
             ListBox.Items.Clear();
