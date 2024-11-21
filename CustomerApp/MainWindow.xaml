@@ -19,7 +19,7 @@
                     <ColumnDefinition Width="8*"/>
                 </Grid.ColumnDefinitions>
                 <TextBlock Text="名前" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
-                <TextBox x:Name="NameTextBox"  Grid.Row="0" Grid.Column="1" Margin="2"/>
+                <TextBox x:Name="NameTextBox"  Grid.Row="0" Grid.Column="1" Margin="2" TextChanged="NameTextBox_TextChanged"/>
                 <TextBlock Text="電話番号" Grid.Row="1" Grid.Column="0"  VerticalAlignment="Center"/>
                 <TextBox x:Name="PhoneTextBox"  Grid.Row="1" Grid.Column="1"  Margin="2"/>
                 <TextBlock Text="住所" Grid.Row="2" Grid.Column="0"  VerticalAlignment="Center"/>
@@ -30,7 +30,7 @@
             <Button Content="Update" x:Name="UpdateButton" Click="UpdateButton_Click" Margin="2"/>
             
             <TextBox x:Name="SearchTextBox" FontSize="20" TextChanged="SearchTextBox_TextChanged"/>
-            <ListView x:Name="CustomerListView" Height="300" d:ItemsSource="{d:SampleData}">
+            <ListView x:Name="CustomerListView" Height="300" d:ItemsSource="{d:SampleData}" SelectionChanged="CustomerListView_SelectionChanged">
                 
                 <ListView.ItemTemplate>
                     <DataTemplate>

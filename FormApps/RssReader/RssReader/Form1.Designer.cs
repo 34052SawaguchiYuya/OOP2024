@@ -24,75 +24,73 @@
         /// </summary>
         private void InitializeComponent() {
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.syutoku = new System.Windows.Forms.Button();
-            this.touroku = new System.Windows.Forms.Button();
-            this.webBrowser = new System.Windows.Forms.WebBrowser();
-            this.listBox = new System.Windows.Forms.ListBox();
-            this.cbRssUrl2 = new System.Windows.Forms.ComboBox();
-            this.cbRssUrl = new System.Windows.Forms.ComboBox();
+            this.Syutoku = new System.Windows.Forms.Button();
+            this.Touroku = new System.Windows.Forms.Button();
+            this.WebBrowser = new System.Windows.Forms.WebBrowser();
+            this.ListBox = new System.Windows.Forms.ListBox();
+            this.CbRssUrl2 = new System.Windows.Forms.ComboBox();
+            this.CbRssUrl = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // syutoku
+            // Syutoku
             // 
-            this.syutoku.Location = new System.Drawing.Point(91, 23);
-            this.syutoku.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.syutoku.Name = "syutoku";
-            this.syutoku.Size = new System.Drawing.Size(63, 25);
-            this.syutoku.TabIndex = 0;
-            this.syutoku.Text = "取得";
-            this.syutoku.UseVisualStyleBackColor = true;
-            this.syutoku.Click += new System.EventHandler(this.syutoku_Click);
+            this.Syutoku.Location = new System.Drawing.Point(91, 23);
+            this.Syutoku.Margin = new System.Windows.Forms.Padding(2);
+            this.Syutoku.Name = "Syutoku";
+            this.Syutoku.Size = new System.Drawing.Size(63, 25);
+            this.Syutoku.TabIndex = 0;
+            this.Syutoku.Text = "取得";
+            this.Syutoku.UseVisualStyleBackColor = true;
+            this.Syutoku.Click += new System.EventHandler(this.Syutoku_Click);
             // 
-            // touroku
+            // Touroku
             // 
-            this.touroku.Location = new System.Drawing.Point(366, 23);
-            this.touroku.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.touroku.Name = "touroku";
-            this.touroku.Size = new System.Drawing.Size(63, 25);
-            this.touroku.TabIndex = 1;
-            this.touroku.Text = "登録";
-            this.touroku.UseVisualStyleBackColor = true;
-            this.touroku.Click += new System.EventHandler(this.touroku_Click);
+            this.Touroku.Location = new System.Drawing.Point(366, 23);
+            this.Touroku.Margin = new System.Windows.Forms.Padding(2);
+            this.Touroku.Name = "Touroku";
+            this.Touroku.Size = new System.Drawing.Size(63, 25);
+            this.Touroku.TabIndex = 1;
+            this.Touroku.Text = "登録";
+            this.Touroku.UseVisualStyleBackColor = true;
+            this.Touroku.Click += new System.EventHandler(this.Touroku_Click);
             // 
-            // webBrowser
+            // WebBrowser
             // 
-            this.webBrowser.Location = new System.Drawing.Point(251, 106);
-            this.webBrowser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.webBrowser.MinimumSize = new System.Drawing.Size(13, 15);
-            this.webBrowser.Name = "webBrowser";
-            this.webBrowser.Size = new System.Drawing.Size(270, 363);
-            this.webBrowser.TabIndex = 2;
+            this.WebBrowser.Location = new System.Drawing.Point(251, 106);
+            this.WebBrowser.Margin = new System.Windows.Forms.Padding(2);
+            this.WebBrowser.MinimumSize = new System.Drawing.Size(13, 15);
+            this.WebBrowser.Name = "WebBrowser";
+            this.WebBrowser.Size = new System.Drawing.Size(270, 363);
+            this.WebBrowser.TabIndex = 2;
             // 
-            // listBox
+            // ListBox
             // 
-            this.listBox.FormattingEnabled = true;
-            this.listBox.ItemHeight = 12;
-            this.listBox.Location = new System.Drawing.Point(15, 106);
-            this.listBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.listBox.Name = "listBox";
-            this.listBox.Size = new System.Drawing.Size(204, 364);
-            this.listBox.TabIndex = 3;
-            this.listBox.SelectedIndexChanged += new System.EventHandler(this.listBox_SelectedIndexChanged);
+            this.ListBox.FormattingEnabled = true;
+            this.ListBox.ItemHeight = 12;
+            this.ListBox.Location = new System.Drawing.Point(15, 106);
+            this.ListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.ListBox.Name = "ListBox";
+            this.ListBox.Size = new System.Drawing.Size(204, 364);
+            this.ListBox.TabIndex = 3;
+            this.ListBox.SelectedIndexChanged += new System.EventHandler(this.ListBox_SelectedIndexChanged);
             // 
-            // cbRssUrl2
+            // CbRssUrl2
             // 
-            this.cbRssUrl2.FormattingEnabled = true;
-            this.cbRssUrl2.Location = new System.Drawing.Point(276, 52);
-            this.cbRssUrl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cbRssUrl2.Name = "cbRssUrl2";
-            this.cbRssUrl2.Size = new System.Drawing.Size(239, 20);
-            this.cbRssUrl2.TabIndex = 4;
-            this.cbRssUrl2.SelectedIndexChanged += new System.EventHandler(this.cbRssUrl2_SelectedIndexChanged);
+            this.CbRssUrl2.FormattingEnabled = true;
+            this.CbRssUrl2.Location = new System.Drawing.Point(276, 52);
+            this.CbRssUrl2.Margin = new System.Windows.Forms.Padding(2);
+            this.CbRssUrl2.Name = "CbRssUrl2";
+            this.CbRssUrl2.Size = new System.Drawing.Size(239, 20);
+            this.CbRssUrl2.TabIndex = 4;
             // 
-            // cbRssUrl
+            // CbRssUrl
             // 
-            this.cbRssUrl.FormattingEnabled = true;
-            this.cbRssUrl.Location = new System.Drawing.Point(8, 52);
-            this.cbRssUrl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cbRssUrl.Name = "cbRssUrl";
-            this.cbRssUrl.Size = new System.Drawing.Size(243, 20);
-            this.cbRssUrl.TabIndex = 5;
-            this.cbRssUrl.SelectedIndexChanged += new System.EventHandler(this.cbRssUrl_SelectedIndexChanged);
+            this.CbRssUrl.FormattingEnabled = true;
+            this.CbRssUrl.Location = new System.Drawing.Point(8, 52);
+            this.CbRssUrl.Margin = new System.Windows.Forms.Padding(2);
+            this.CbRssUrl.Name = "CbRssUrl";
+            this.CbRssUrl.Size = new System.Drawing.Size(243, 20);
+            this.CbRssUrl.TabIndex = 5;
             // 
             // Form1
             // 
@@ -100,14 +98,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Violet;
             this.ClientSize = new System.Drawing.Size(539, 478);
-            this.Controls.Add(this.cbRssUrl);
-            this.Controls.Add(this.cbRssUrl2);
-            this.Controls.Add(this.listBox);
-            this.Controls.Add(this.webBrowser);
-            this.Controls.Add(this.touroku);
-            this.Controls.Add(this.syutoku);
+            this.Controls.Add(this.CbRssUrl);
+            this.Controls.Add(this.CbRssUrl2);
+            this.Controls.Add(this.ListBox);
+            this.Controls.Add(this.WebBrowser);
+            this.Controls.Add(this.Touroku);
+            this.Controls.Add(this.Syutoku);
             this.ForeColor = System.Drawing.Color.Blue;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.RightToLeftLayout = true;
             this.Text = "Form1";
@@ -118,12 +116,12 @@
         #endregion
 
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Button syutoku;
-        private System.Windows.Forms.Button touroku;
-        private System.Windows.Forms.WebBrowser webBrowser;
-        private System.Windows.Forms.ListBox listBox;
-        private System.Windows.Forms.ComboBox cbRssUrl2;
-        private System.Windows.Forms.ComboBox cbRssUrl;
+        private System.Windows.Forms.Button Syutoku;
+        private System.Windows.Forms.Button Touroku;
+        private System.Windows.Forms.WebBrowser WebBrowser;
+        private System.Windows.Forms.ListBox ListBox;
+        private System.Windows.Forms.ComboBox CbRssUrl2;
+        private System.Windows.Forms.ComboBox CbRssUrl;
     }
 }
 

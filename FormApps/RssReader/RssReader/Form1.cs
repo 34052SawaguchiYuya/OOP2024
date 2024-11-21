@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,17 +34,17 @@ namespace RssReader {
                 {"地域", "https://news.yahoo.co.jp/rss/topics/local.xml"},
             };
             foreach (var item in rssDict.Keys) {
-                cbRssUrl.Items.Add(item);
+                CbRssUrl.Items.Add(item);
             }
 
-            cbRssUrl.SelectedIndexChanged += cbRssUrl_SelectedIndexChanged;
+            CbRssUrl.SelectedIndexChanged += CbRssUrl_SelectedIndexChanged;
         }
-
-        private void syutoku_Click(object sender, EventArgs e) {
-            if (cbRssUrl.SelectedIndex == null)
+        
+        private void Syutoku_Click(object sender, EventArgs e) {
+            if (CbRssUrl.SelectedItem == null)
                 return;
 
-            string selectedCategory = cbRssUrl.SelectedItem.ToString();
+            string selectedCategory = CbRssUrl.SelectedItem.ToString();
             string rssUrl = rssDict[selectedCategory];
 
             using (var wc = new WebClient()) {
@@ -57,42 +58,42 @@ namespace RssReader {
                     }).ToList();
 
                 foreach (var item in items) {
-                    listBox.Items.Add(item.Title);
+                    ListBox.Items.Add(item.Title);
                 }
 
             }
         }
 
-        private void touroku_Click(object sender, EventArgs e) {
-            touroku.Enabled = false;
+        private void Touroku_Click(object sender, EventArgs e) {
+            Touroku.Enabled = false;
 
-            string favorite = cbRssUrl2.Text.Trim();
-            string selectedUrl = cbRssUrl.Text.ToString();
+            string favorite = CbRssUrl2.Text.Trim();
+            string selectedUrl = CbRssUrl.Text.ToString();
 
             if (!string.IsNullOrEmpty(favorite) && !string.IsNullOrEmpty(selectedUrl)) {
-                cbRssUrl.Items.Add(favorite);
+                CbRssUrl.Items.Add(favorite);
                 rssDict[favorite] = selectedUrl;
                 MessageBox.Show("登録完了");
             } else {
                 MessageBox.Show("名前とURLの両方を入力してください。");
             }
-            touroku.Enabled = true;
+            Touroku.Enabled = true;
         }
 
-        private void listBox_SelectedIndexChanged(object sender, EventArgs e) {
-            if (cbRssUrl.SelectedIndex != null) {
-                var selectedTitle = listBox.SelectedItem.ToString();
+        private void ListBox_SelectedIndexChanged(object sender, EventArgs e) {
+            if (ListBox.SelectedItem != null) {
+                var selectedTitle = ListBox.SelectedItem.ToString();
                 var selectedItem = items.FirstOrDefault(item => item.Title == selectedTitle);
                 if (selectedItem != null) {
                 }
             }
         }
 
-        private void cbRssUrl_SelectedIndexChanged(object sender, EventArgs e) {
-            listBox.Items.Clear();
+        private void CbRssUrl_SelectedIndexChanged(object sender, EventArgs e) {
+            ListBox.Items.Clear();
         }
 
-        private void cbRssUrl2_SelectedIndexChanged(object sender, EventArgs e) {
+        private void CbRssUrl2_SelectedIndexChanged(object sender, EventArgs e) {
 
         }
         public class ItemData {

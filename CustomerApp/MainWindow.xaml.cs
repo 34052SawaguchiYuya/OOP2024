@@ -80,5 +80,31 @@ namespace CustomerApp {
         private void Window_Loaded(object sender, RoutedEventArgs e) {
             ReadDatabase(); //ListView表示
         }
+
+        private void CustomerListView_SelectionChanged(object sender, SelectionChangedEventArgs e) {
+            NameTextBox.Text = _customers[CustomerListView.SelectedIndex].Name;
+        }
+
+        private void NameTextBox_TextChanged(object sender, TextChangedEventArgs e) {
+
+        }
     }
 }
+
+/*
+ * ①ListViewに表示されているデータをクリックすると、入力エリアに内容を表示する
+ * ②①の内容を変更してUpdateボタンを押すと
+ * データベースが更新される
+ * 
+ * ③画像も保存できるように追加する（DBに登録されている画像はListViewに表示）
+ * 画像の差し替え、クリアができるようにする。
+ * 
+ * ④Saveボタンの名称をRegist（または登録）に変更
+ * 
+ * ⑤名前が未表示の場合は登録できないようにする
+ * 
+ * ⑥フィルターを設定したときに、ListViewから一件選択
+ * 
+ * ⑦見た目（レイアウトやバランスなど）をしっかり考える
+ * 
+ */
