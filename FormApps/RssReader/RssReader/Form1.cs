@@ -81,7 +81,7 @@ namespace RssReader {
         }
 
         private void ListBox_SelectedIndexChanged(object sender, EventArgs e) {
-            if (ListBox.SelectedItem != null) {
+            if (ListBox.SelectedItem != null) { 
                 var selectedTitle = ListBox.SelectedItem.ToString();
                 var selectedItem = items.FirstOrDefault(item => item.Title == selectedTitle);
                 if (selectedItem != null) {
